@@ -30,9 +30,6 @@ google.maps.visualRefresh = true;
 
 var map;
 function initialize() {
- 
- map = new google.maps.Map(document.getElementById('map-canvas'), {
-n initialize() {
   var mapOptions = {
     zoom: 2,
     mapTypeId: google.maps.MapTypeId.ROADMAP
