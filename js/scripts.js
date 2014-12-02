@@ -32,7 +32,7 @@ function initialize() {
     zoom: 15,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  map = new google.maps.Map(document.getElementById('map-canvas2'),
+  map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
   	// try HTML5 geolocation
   if(navigator.geolocation) {
@@ -74,10 +74,5 @@ function handleNoGeolocation(errorFlag) {
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
-var map = L.map('map-canvas').setView([51.505, -0.09], 13);
-L.tileLayer('http://{s}.tiles.mapbox.com/v3/MapID/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18
-}).addTo(map);
 
 });
