@@ -154,6 +154,7 @@
         "properties" : { "fill" : "#6a3d9a", "stroke" : "#6a3d9a", "fill-opacity" : "0.9", "WRS2" : "127052", "Project" : "Cambodia Deforestation", "Author" : "xjtang", "Location" : "/projectnb/landsat/projects/cambodia/data/p127r052/"}, "geometry" : {"type": "Polygon", "coordinates": [[[104.19039305142155, 12.1313881554921], [103.8876380605192, 10.762052561223289], [103.871, 10.6868], [102.19785730294245, 10.929775501585835], [102.197, 10.9299], [102.525, 12.4509], [102.52528211581651, 12.450859007666141], [104.207, 12.2065], [104.19039305142155, 12.1313881554921]]]}}
          ]
 },
+     {
       "type": "Feature",
       "properties": {
         "letter": "G",
