@@ -32,7 +32,7 @@ function initialize() {
  
  map = new google.maps.Map(document.getElementById('map-canvas'), {
     zoom: 2,
-    center: {lat: 42.3, -71.06}
+    center: {lat: 42.3, lng: -71.06}
     });
 
   map.data.loadGeoJson('https://raw.githubusercontent.com/bullocke/Landsat-Database/master/PRmap.geojson');
@@ -42,4 +42,4 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
-};
+});
