@@ -35,7 +35,7 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
-    map.data.loadGeoJson('https://raw.githubusercontent.com/bullocke/Landsat-Database/master/PRmap.geojson');
+    map.data.loadGeoJson('https://raw.githubusercontent.com/bullocke/CCDC-Website/gh-pages/PRmap.json');
   
 	// try HTML5 geolocation
   if(navigator.geolocation) {
