@@ -70,6 +70,7 @@ function handleNoGeolocation(errorFlag) {
 
   var infowindow = new google.maps.InfoWindow(options);
   map.setCenter(options.position);
+  map.data.loadGeoJson('https://raw.githubusercontent.com/bullocke/Landsat-Database/master/PRmap.geojson');
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
