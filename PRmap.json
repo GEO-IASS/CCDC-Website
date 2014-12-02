@@ -1,6 +1,7 @@
- {"type": "FeatureCollection",
-"features": [
-     {
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
       "type": "Feature",
       "properties": {
         "letter": "G",
@@ -143,4 +144,3 @@
     }
   ]
 }
-    
