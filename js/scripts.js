@@ -34,7 +34,10 @@ function initialize() {
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
-  	// try HTML5 geolocation
+
+    map.data.loadGeoJson('https://raw.githubusercontent.com/bullocke/Landsat-Database/master/PRmap.geojson');
+  
+	// try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = new google.maps.LatLng(position.coords.latitude,
@@ -70,7 +73,6 @@ function handleNoGeolocation(errorFlag) {
 
   var infowindow = new google.maps.InfoWindow(options);
   map.setCenter(options.position);
-  map.data.loadGeoJSON('https://raw.githubusercontent.com/bullocke/CCDC-Website/gh-pages/PRmap.json');
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
