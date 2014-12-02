@@ -21,10 +21,11 @@
  		 map = new google.maps.Map(document.getElementById('map-canvas'), {
 		    zoom: 4,
   		  center: {lat: -28, lng: 137.883}
-		  });
+		mapTypeId: google.maps.MapTypeId.SATELLITE  
+		});
 
   // Load a GeoJSON from the same server as our demo.
-  map.data.loadGeoJson('https://storage.googleapis.com/maps-devrel/google.json');
+  map.data.loadGeoJson('https://github.com/bullocke/CCDC-Website/blob/gh-pages/PRmap.json');
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
