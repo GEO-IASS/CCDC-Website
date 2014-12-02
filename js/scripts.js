@@ -32,7 +32,7 @@ function initialize() {
     zoom: 15,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
+  map = new google.maps.Map(document.getElementById('map-canvas2'),
       mapOptions);
   	// try HTML5 geolocation
   if(navigator.geolocation) {
