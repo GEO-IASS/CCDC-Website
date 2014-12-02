@@ -29,11 +29,13 @@ google.maps.visualRefresh = true;
 var map;
 function initialize() {
   var mapOptions = {
-    zoom: 1,
+    zoom: 2,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
+  map.data.loadGeoJson('https://raw.githubusercontent.com/bullocke/Landsat-Database/master/PRmap.geojson');
+
   	// try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
