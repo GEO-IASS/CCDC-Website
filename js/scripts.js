@@ -77,13 +77,7 @@ function handleNoGeolocation(errorFlag) {
   map.setCenter(options.position);
 }
 
-    zoom: 2,
-    center: {lat: 42.3, lng: -71.06}
-    });
-  map.data.loadGeoJson('https://raw.githubusercontent.com/bullocke/Landsat-Database/master/PRmap.geojson');
-
-}
-oogle.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
 
 
-}
+});
