@@ -57,7 +57,7 @@ h1,h2,h3,h4 {
 }
 
 header {
-  background: #f16251;
+  background: url('https://raw.githubusercontent.com/bullocke/Landsat-Database/master/HelperFiles/landsat_nasa.jpg');
   height:550px;
   color:#000000;
 }
