@@ -191,9 +191,9 @@ section {
 
 .bg-1 {
 	background: url('https://raw.githubusercontent.com/bullocke/Landsat-Database/master/HelperFiles/Background_vietnam.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
+    -webkit-background-size: 100%;
+  	-moz-background-size: 100%;
+  	-o-background-size: 100%;
   	background-size: 100%;
 }
 
