@@ -29,6 +29,14 @@
 
   // Load a GeoJSON from the same server as our demo.
   map.data.loadGeoJson('https://cdn.rawgit.com/bullocke/Landsat-Database/master/PRmap.geojson');
+
+ map.data.setStyle(function(feature) {
+    return /** @type {google.maps.Data.StyleOptions} */({
+      fillColor: feature.getProperty('fillColor'),
+      strokeWeight: 1
+    });
+  });
+
 }
 
   google.maps.event.addDomListener(window, 'load', initialize);
@@ -209,13 +217,13 @@
 
 <div class="container">
   	<div class="col-sm-8 col-sm-offset-2 text-center">
-      <h2>Beautiful Bootstrap Templates</h2>
+      <h2>Boston University - Earth & Environment</h2>
       
       <hr>
       <h4>
-        We love templates. We love Bootstrap.
+        685 Commonwealth Avenue
       </h4>
-      <p>Get more free templates like this at the <a href="http://bootply.com">Bootstrap Playground</a>, Bootply.</p>
+      <p>Boston, MA 02215</p>
       <hr>
       <ul class="list-inline center-block">
         <li><a href="http://facebook.com/bootply"><img src="/assets/example/soc_fb.png"></a></li>
@@ -225,13 +233,13 @@
       </ul>
       
   	</div><!--/col-->
-</div><!--/container-->
+</d
+v><!--/container-->
   
 </div><!--/wrap-->
 
 <div id="footer">
   <div class="container">
-    <p class="text-muted">This Bootstrap Example courtesy <a href="http://www.bootply.com">Bootply.com</a></p>
   </div>
 </div>
 
