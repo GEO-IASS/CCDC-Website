@@ -41,7 +41,7 @@ html,body {
 
 #map-canvas {
     width: 100%; 
-    height: 600px;
+    height: 750px;
     margin: 0;
     padding: 0px;
     border: 4px solid black;
@@ -73,7 +73,7 @@ a.list-group-item.active,[class*='-info'] {
 }
   
 #section2 {
-	background-color: #e5e5ef;
+	background-color: #e4e4e4;
     color:#424242;
 }
   
