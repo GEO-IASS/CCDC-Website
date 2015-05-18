@@ -3,235 +3,338 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Boston University Time Series Research</title>
+		<title>Section scroller template</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
-		<script type="text/javascript"
-     		 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhRvZuDz0h6FleLy4yQ1KK6Fnu0ugS7Vk">
-   		 </script>
-    <script>
+                <script type="text/javascript"
+                                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhRvZuDz0h6FleLy4yQ1KK6Fnu0ugS7Vk">
+                </script>
+                <script>
   // Create a simple map.
-  function initialize() {
-    var mapOptions = {
-       center: {lat: 42.3581, lng: -71.0636},
-       zoom: 2,
-       scrollwheel: false,
-       mapTypeId: google.maps.MapTypeId.SATELLITE 
-       }
+    function initialize() {
+            var mapOptions = {
+                       center: {lat: 42.3581, lng: -71.0636},
+                              zoom: 2,
+                                     scrollwheel: false,
+                                            mapTypeId: google.maps.MapTypeId.SATELLITE 
+                                                   }
 
-    var map = new google.maps.Map(document.getElementById('map-canvas'),
-                                  mapOptions);
+                                                       var map = new google.maps.Map(document.getElementById('map-canvas'),
+                                                                                         mapOptions);
 
-  // Load a GeoJSON from the same server as our demo.
-  map.data.loadGeoJson('https://cdn.rawgit.com/bullocke/Landsat-Database/master/PRmap.geojson');
+                                                                                           // Load a GeoJSON from the same server as our demo.
+                                                                                             map.data.loadGeoJson('https://cdn.rawgit.com/bullocke/Landsat-Database/master/PRmap.geojson');
 
- map.data.setStyle(function(feature) {
-    return /** @type {google.maps.Data.StyleOptions} */({
-      fillColor: feature.getProperty('fillColor'),
-      strokeWeight: 1
-    });
-  });
+                                                                                              map.data.setStyle(function(feature) {
+                                                                                                      return /** @type {google.maps.Data.StyleOptions} */({
+                                                                                                                fillColor: feature.getProperty('fill'),
+                                                                                                                      strokeWeight: 1,
+                                                                                                                      fillOpacity: .9
+                                                                                                                  });
+     });
 
-}
-
+ }
   google.maps.event.addDomListener(window, 'load', initialize);
+
 </script>
-
-	</head>
-	<body>
-<!-- Wrap all page content here -->
-<div id="wrap">
-  
-<header class="masthead">
-    <div class="container">
-    <div class="row">
-    <div class="col-sm-6">
-    </div>
-    <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <h5><title="Bootstrap Template">Boston University Landsat-Based Change Detection
-          <p class="lead">{Note: This website is in development. Images courtesy of NASA and USGS. Research done at BU}</p></h5>
-      </div>
-      <div class="col-sm-6">
-        <div class="pull-right  hidden-xs">    
-        </div>
-      </div>
-    </div>
-    </div>
-</header>
-  
-  
-<!-- Fixed navbar -->
-<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav nav-justified">
-          <li><a href="#">Home</a></li>
-          <li><a href="#section2">Where</a></li>
-          <li><a href="#section3">Why</a></li>
-          <li class="active"><a href="#section1"><strong>How</strong></a></li>
-          <li><a href="#section5">Contact</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div><!--/.container -->
-</div><!--/.navbar -->
-  
-
-
-
-<section class="bg-1">
-  
-  <div class="container" id="section1">
-     <div class="col-sm-8 col-sm-offset-2 text-center">
-                       
-                                            
-         </div><!--/col-->
- </div><!--/container-->
-
-
-
-
-<div class="container" id="section1">
-</section> 
-   </div>
-<div class="row", id="section2">
-      <BR>
-          <BR>
-              <BR>
-                  <BR>
-                      <BR>
-    <h1 class="text-center">Where In The World?</h1>
-  <div id="map-canvas"></div>
-  
-  <hr>
-  
-  <section class="bg-3" id="section4">
-  <div class="col-sm-6 col-sm-offset-3 text-center"><h2 style="padding:20px;background-color:rgb(1,50,32)">
-  
-
-
-                              
-                                                             Thanks to the USGS's open data policy for the Landsat program, we  are no      longer constrained to using        single or few images for classification and change detection. By   using all     available historical data noise can    be reduced and pixel-scale models can be fit across time.
-
-
-
-
-  </h2></div>
-</section>
-  
-
-  <div class="col-sm-3 pull-right">
-
-      <address>
-        <strong>Boston University</strong><br>
-        Department of Earth and the Environment<br>
-        685 Commonwealth Avenue<br>
-        Boston, MA 02215<br>
-      </address>
     
-      <address>
-        <strong>Email Us</strong><br>
-        <a href="mailto:#">bullocke@bu.edu</a>
-      </address>          
-  </div>
-  
-</div><!--/row-->
-
-<!-- Begin page content -->
-
-<div class="divider" id="section2"></div>
- 
-  
-  
-  
-<div class="container bg-4">
-	<div class="row">
-	   <div class="col-sm-4 col-xs-6">
-      
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <p class="lead">MATLAB Version</p>
-          </div>
-        </div><!--/panel-->
-      </div><!--/col-->
-      
-      <div class="col-sm-4 col-xs-6">
-      
-      	<div class="panel panel-default">
-          <div class="panel-body">
-            <p class="lead">Python Version (Beta)</p>
-          </div>
-        </div><!--/panel--> 
-      </div><!--/col-->
-      
-      <div class="col-sm-4 col-xs-6">
-      
-      	<div class="panel panel-default">
-          <div class="panel-body">
-            <p class="lead">QGIS Visualization Plugin</p>
-          </div>
-        </div><!--/panel--> 
-
-      </div><!--/col--> 
-	</div><!--/row-->
-</div><!--/container-->
-
-<div class="container">
-  	<div class="col-sm-8 col-sm-offset-2 text-center">
-      <h2>Boston University - Earth & Environment</h2>
-      
-      <hr>
-      <h4>
-        685 Commonwealth Avenue
-      </h4>
-      <p>Boston, MA 02215</p>
-      <hr>
-      <ul class="list-inline center-block">
-        <li><a href="http://facebook.com/bootply"><img src="https://raw.githubusercontent.com/bullocke/CCDC-Website/gh-pages/images/BU_logo.gif" height="40" width="100"></a></li>
-        <li><a href="http://twitter.com/bootply"><img src="https://raw.githubusercontent.com/bullocke/CCDC-Website/gh-pages/images/nasa_log.png" height="50" width="60"></a></li>
-        <li><a href="http://google.com/+bootply"><img src="https://raw.githubusercontent.com/bullocke/CCDC-Website/gh-pages/images/USGS_logo.png" height="40" width="100"></a></li>
-      </ul>
-      
-  	</div><!--/col-->
-</d
-v><!--/container-->
-  
-</div><!--/wrap-->
-
-<div id="footer">
+    </head>
+	<body>
+<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
   <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand navbar-left" href="#">CCDC</a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-collapsible">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="#section1">What</a></li>
+        <li><a href="#section2">Where</a></li>
+        <li><a href="#section3">How</a></li>
+        <li><a href="#section4">Four</a></li>
+        <li><a href="#section5">Five</a></li>
+        <li><a href="#section6">Why</a></li>
+        <li><a href="#section7">Who</a></li>
+        <li>&nbsp;</li>
+      </ul>
+      <form class="navbar-form">
+        <div class="form-group" style="display:inline;">
+          <div class="input-group"> 
+            <div class="input-group-btn">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
+</nav>
 
+<section class="container-fluid" id="section1">
+  	<h1 class="text-center v-center">Continuous Change Detection and Classification (CCDC)</h1>
+ 	
+  	<div class="container">
+      <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-2 text-center"><h3>Continuous</h3><p>Predict future observations on a pixel by pixel basis.</p><i class="fa fa-cog fa-5x"></i></div>
+            </div>
+          </div>
+          <div class="col-sm-4 text-center">
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1 text-center"><h3>Change Detection</h3><p>Multi-temporal change detection using all avalaible images and spectral bands.</p><i class="fa fa-user fa-5x"></i></div>
+            </div>
+          </div>
+          <div class="col-sm-4 text-center">
+            <div class="row">
+              <div class="col-sm-10 text-center"><h3>Classification</h3><p>Use model coefficients to classify images at any point in study period.</p><i class="fa fa-mobile fa-5x"></i></div>
+            </div>
+          </div>
+      </div><!--/row-->
+    <div class="row"><br></div>
+  </div><!--/container-->
+</section>
+
+<section class="container-fluid" id="section2">
+  <div class="row">
+      <div class="container-fluid text-center">
+            <h1>Where?</h1>
+    <br>
+
+     <div id="map-canvas"></div>
+	 <br> 
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid" id="section1">
+	<h1 class="text-center">Bootstrap is Responsive</h1>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h3 class="text-center">Vertical scrolling has become a popular and lasting trend in Web design.</h3>
+        <div class="row">
+          <div class="col-xs-4 col-xs-offset-1">Some brand-tacular designs even have home page content that is taller that 12,000 pixels. That's a lotta content.</div>
+          <div class="col-xs-2"></div>
+          <div class="col-xs-4 text-right">Anyhoo, this is just some random blurb of text, and Bootply.com is a playground and code editor for Bootstrap.</div>
+        </div>
+        <p class="text-center">
+          <img src="/assets/example/img_mtnpeople.png" class="img-responsive center-block ">
+        </p>
+      </div>
+   </div>
+</section>
+
+<section class="container-fluid" id="section4">
+	<h2 class="text-center">Change this Content. Change the world.</h2>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+      <img src="/assets/example/bg_smartphones.jpg" class="img-responsive center-block ">
+      <p class="text-center">Images will scale down proportionately as browser width narrows.</p>
+      </div>
+    </div>
+</section>
+
+<section class="container-fluid" id="section5">
+  <div class="col-sm-10 col-sm-offset-1">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-xs-12">
+            <div class="list-group">
+              <a href="#" class="list-group-item active">
+                <h2 class="list-group-item-heading">Basic</h2>
+                <h6>Free to get started</h6>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 100 - more about this</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 2 - this is more about this</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 3 GB</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 4</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Feature</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Feature</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <button class="btn btn-primary btn-lg btn-block">Get Started</button>
+              </a>
+            </div>
+      </div><!--/left-->
+      
+      <div class="col-sm-4 col-xs-12">
+            <div class="list-group text-center">
+              <a href="#" class="list-group-item active">
+                <h2 class="list-group-item-heading">Better</h2>
+                <h6>Most popular plan</h6>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 200 - more about this</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 2 - this is more about this</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 5 GB</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 6</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Feature</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Feature</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <button class="btn btn-default btn-lg btn-block">$10 per month</button>
+              </a>
+            </div>
+      </div><!--/middle-->
+      
+      <div class="col-sm-4 col-xs-12">
+            <div class="list-group text-right">
+              <a href="#" class="list-group-item active">
+                <h2 class="list-group-item-heading">Best</h2>
+                <h6>For enterprise grade</h6>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 100 - more about this</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 2 - this is more about this</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 8 GB</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Option 10</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Unlimited</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <p class="list-group-item-text">Unlimited</p>
+              </a>
+              <a href="#" class="list-group-item">
+                <button class="btn btn-default btn-lg btn-block">$20 per month</button>
+              </a>
+            </div>
+      </div><!--/right-->
+      
+    </div><!--/row-->
+    </div><!--/container--> 
+  </div>
+</section>
+
+<section class="container-fluid" id="section6">
+	<h2 class="text-center">Do you see what I mean?</h2>
+    <p class="text-center lead">Add some compelling information here</p>
+    <img src="/assets/example/bg_iphone.png" class="img-responsive center-block ">
+    
+</section>
+
+<section class="container" id="section7">
+	<h1 class="text-center">Social Media Fascination</h1>
+    <div class="row">
+      <!--fontawesome icons-->
+      <div class="col-sm-1 col-sm-offset-2 col-xs-4 text-center">
+       <i class="fa fa-github fa-4x"></i>
+      </div>
+      <div class="col-sm-1 col-xs-4 text-center">
+       <i class="fa fa-foursquare fa-4x"></i>
+      </div>
+      <div class="col-sm-1 col-xs-4 text-center">
+       	<i class="fa fa-facebook fa-4x"></i>
+      </div>
+      <div class="col-sm-1 col-xs-4 text-center">
+       <i class="fa fa-pinterest fa-4x"></i>
+      </div>
+      <div class="col-sm-1 col-xs-4 text-center">
+       <i class="fa fa-google-plus fa-4x"></i>
+      </div>
+      <div class="col-sm-1 col-xs-4 text-center">
+       <i class="fa fa-twitter fa-4x"></i>
+      </div>
+      <div class="col-sm-1 col-xs-4 text-center">
+       <i class="fa fa-dribbble fa-4x"></i>
+      </div>
+      <div class="col-sm-1 col-xs-4 text-center">
+       <i class="fa fa-instagram fa-4x"></i>
+      </div>
+  </div><!--/row-->
+  <div class="row">
+  	<div class="col-md-12 text-center">
+      <br><br>
+      <p>
+    	<a href="http://www.bootstrapzero.com/bootstrap-template/sectionalize">Get the code for this template.</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">    
+      <div class="col-xs-6 col-sm-6 col-md-3 column">          
+          <h4>Information</h4>
+          <ul class="nav">
+            <li><a href="about-us.html">Products</a></li>
+            <li><a href="about-us.html">Services</a></li>
+            <li><a href="about-us.html">Benefits</a></li>
+            <li><a href="elements.html">Developers</a></li>
+          </ul> 
+        </div>
+      <div class="col-xs-6 col-md-3 column">          
+          <h4>Follow Us</h4>
+          <ul class="nav">
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Google+</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul> 
+      </div>
+      <div class="col-xs-6 col-md-3 column">          
+          <h4>Contact Us</h4>
+          <ul class="nav">
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Headquarters</a></li>
+            <li><a href="#">Management</a></li>
+            <li><a href="#">Support</a></li>
+          </ul> 
+      </div>
+      <div class="col-xs-6 col-md-3 column">          
+          <h4>Customer Service</h4>
+          <ul class="nav">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Delivery Information</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+          </ul> 
+      </div>
+    </div><!--/row-->
+  </div>
+</footer>
 
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
-
-	<script src="js/scripts.js"></script>
-
-
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
