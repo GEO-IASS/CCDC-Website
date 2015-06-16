@@ -1,2 +1,12 @@
+#to make the colors be corresponding with project:
+return /** @type {google.maps.Data.StyleOptions} */({
+                                                                                                                   fillColor: feature.getProperty('fill'),
+                                                                                                                         strokeWeight: 1,
+                                                                                                                         fillOpacity: .9
+                                                                                                                     });
+        });
+
+
+
         <p><script src="https://embed.github.com/view/geojson/bullocke/Landsat-Database/master/PRmap.geojson" class="img-responsive center-block"></script></p>  
          <p><img src = "https://raw.githubusercontent.com/bullocke/Landsat-Database/master/HelperFiles/Website_legend.png" width=800></p>
